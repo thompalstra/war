@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body{
+        background-color: black;
+        margin: 0; padding: 0;
+      }
+      #main{
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: white;
+      }
+      #canvas{
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #ddd;
+        z-index: 10;
+      }
+      #main ui section{
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+      }
+      #main ui section:not(:last-child){
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <canvas id="canvas"></canvas>
+      <ui>
+
+      </ui>
+    </main>
+    <script>
+      const Game = require("Game.js").Game;
+      ( window.game = new Game( main ) ).start();
+    </script>
+  </body>
+</html>
